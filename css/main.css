@@ -1,0 +1,138 @@
+body{
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0;
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    font-family: Arial, Helvetica, sans-serif 
+}
+
+.index_header{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    background-image: url("https://helpinghand.com.au/wp-content/uploads/2022/08/Silent-Auction-Fundraiser.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 969px;
+    color:aliceblue;
+}
+
+@keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+
+.index_header h1{
+    text-align: center;
+    text-transform: uppercase;
+    max-width: fit-content;
+    font-size: 150px;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: lights 5s 750ms linear infinite;
+}
+
+.index_header p{
+    margin-top: 0%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 1500px;
+    font-size: 50px;
+}
+
+.nav_index_item{
+    display: flex;
+    margin: 0;
+    padding: 40px;
+    list-style: none;
+    float: left;
+}
+
+.nav_link{
+    color: #7700ff;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 10rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav_link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  .nav_link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #5b00d3;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .nav_link:hover {
+    color: #fff;
+  }
+  .nav_link:hover:before {
+    width: 100%;
+  }
+
